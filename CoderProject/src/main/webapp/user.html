@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Servlet</title>
+    <style>
+        /* Body Styling */
+        body {
+            background-color: #1a1a1a; /* Dark background */
+            color: #00ff00; /* Neon green text */
+            font-family: 'Courier New', Courier, monospace; /* Monospace font */
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Heading Styling */
+        h1 {
+            color: #00ff00;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+        }
+
+        /* Form Container */
+        form {
+            background-color: #333; /* Dark grey form background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+        }
+
+        /* Input Fields */
+        input[type="text"] {
+            background-color: #333;
+            color: #00ff00;
+            border: 1px solid #00ff00;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            width: 200px;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        /* Submit & Reset Button Styling */
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #00ff00;
+            color: black;
+            border: 1px solid #00ff00;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Buttons on hover */
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #009900;
+            border-color: #009900;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        /* Preformatted text */
+        pre {
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hacker Demo</h1>
+    <form method="get" action="HelloServlet">
+        <pre>
+            Enter your name: <input type="text" name="t1"/>
+            <input type="submit"/>   <input type="reset"/>
+        </pre>
+    </form>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Shock</title>
+    <style>
+       
+        body {
+            background-color: #0e0e0e; 
+            color: #00ff00; 
+            font-family: 'Courier New', Courier, monospace; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        
+        .terminal-text {
+            font-size: 1.5em;
+            line-height: 1.8;
+            white-space: pre;
+            margin-top: 30px;
+            text-align: center;
+            font-weight: bold;
+            animation: typing 3s steps(40) 1s 1 normal both, blink 0.7s step-end infinite;
+            color: #00ff00;
+        }
+
+     
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+       
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        
+        .shock {
+            animation: shock 1s ease-in-out 0.5s forwards;
+        }
+
+        @keyframes shock {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        
+        .flash {
+            animation: flash 0.5s infinite;
+        }
+
+        @keyframes flash {
+            0% {
+                background-color: #00ff00;
+            }
+            50% {
+                background-color: #ff0000;
+            }
+            100% {
+                background-color: #00ff00;
+            }
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="shock">
+        <h1>Hacker System Access</h1>
+    </div>
+
+    <div class="terminal-text flash">
+        <span class="typing-text">Welcome to the system...</span>
+    </div>
+
+    <div>
+        <a href="https://www.example.com" target="_blank">Enter Secure Zone</a>
+    </div>
+
+    <script>
+        // Trigger typing effect and additional animations when the page loads
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector('.terminal-text').classList.remove('flash');
+            }, 5000); // Stop flashing after 5 seconds
+        };
+    </script>
+</body>
+</html>
