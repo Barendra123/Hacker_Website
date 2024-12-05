@@ -74,7 +74,7 @@ public class HelloServlet extends HttpServlet {
             pw.println("<h1>Hello, " + s + "</h1>");
 
             // Add a link to another page
-            pw.println("<a href='./hacker.html'>Go to another page</a>");
+            pw.println("<a href='./home.html'>Go to another page</a>");
 
             pw.println("</body>");
             pw.println("</html>");
